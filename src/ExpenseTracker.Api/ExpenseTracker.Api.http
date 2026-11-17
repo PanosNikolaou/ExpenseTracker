@@ -1,0 +1,24 @@
+@ExpenseTracker.Api_HostAddress = https://localhost:5001
+
+### Record a new expense
+POST {{ExpenseTracker.Api_HostAddress}}/expenses
+Content-Type: application/json
+
+{
+  "description": "Coffee beans",
+  "category": "Groceries",
+  "amount": 12.50,
+  "date": "2026-11-10"
+}
+
+### List all expenses
+GET {{ExpenseTracker.Api_HostAddress}}/expenses
+
+### Get a single expense
+GET {{ExpenseTracker.Api_HostAddress}}/expenses/1
+
+### Monthly summary
+GET {{ExpenseTracker.Api_HostAddress}}/expenses/summary/2026/11
+
+### Delete an expense
+DELETE {{ExpenseTracker.Api_HostAddress}}/expenses/1
